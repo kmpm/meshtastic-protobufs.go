@@ -8,7 +8,8 @@ generate: $(DST_DIR)
 	protoc -I=${SRC_DIR} \
 		--go_out=${DST_DIR} \
 		--go_opt="module=${MODULE}" \
-		./protobufs/meshtastic/*.proto
+		./protobufs/meshtastic/*.proto \
+		./protobufs/nanopb.proto
 
 
 

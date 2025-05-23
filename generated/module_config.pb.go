@@ -309,9 +309,6 @@ const (
 	ModuleConfig_SerialConfig_CALTOPO ModuleConfig_SerialConfig_Serial_Mode = 5
 	// Ecowitt WS85 weather station
 	ModuleConfig_SerialConfig_WS85 ModuleConfig_SerialConfig_Serial_Mode = 6
-	// VE.Direct is a serial protocol used by Victron Energy products
-	// https://beta.ivc.no/wiki/index.php/Victron_VE_Direct_DIY_Cable
-	ModuleConfig_SerialConfig_VE_DIRECT ModuleConfig_SerialConfig_Serial_Mode = 7
 )
 
 // Enum value maps for ModuleConfig_SerialConfig_Serial_Mode.
@@ -324,17 +321,15 @@ var (
 		4: "NMEA",
 		5: "CALTOPO",
 		6: "WS85",
-		7: "VE_DIRECT",
 	}
 	ModuleConfig_SerialConfig_Serial_Mode_value = map[string]int32{
-		"DEFAULT":   0,
-		"SIMPLE":    1,
-		"PROTO":     2,
-		"TEXTMSG":   3,
-		"NMEA":      4,
-		"CALTOPO":   5,
-		"WS85":      6,
-		"VE_DIRECT": 7,
+		"DEFAULT": 0,
+		"SIMPLE":  1,
+		"PROTO":   2,
+		"TEXTMSG": 3,
+		"NMEA":    4,
+		"CALTOPO": 5,
+		"WS85":    6,
 	}
 )
 
@@ -2232,7 +2227,7 @@ var File_meshtastic_module_config_proto protoreflect.FileDescriptor
 const file_meshtastic_module_config_proto_rawDesc = "" +
 	"\n" +
 	"\x1emeshtastic/module_config.proto\x12\n" +
-	"meshtastic\"\x802\n" +
+	"meshtastic\"\xf11\n" +
 	"\fModuleConfig\x129\n" +
 	"\x04mqtt\x18\x01 \x01(\v2#.meshtastic.ModuleConfig.MQTTConfigH\x00R\x04mqtt\x12?\n" +
 	"\x06serial\x18\x02 \x01(\v2%.meshtastic.ModuleConfig.SerialConfigH\x00R\x06serial\x12j\n" +
@@ -2320,7 +2315,7 @@ const file_meshtastic_module_config_proto_rawDesc = "" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x12<\n" +
 	"\x1apaxcounter_update_interval\x18\x02 \x01(\rR\x18paxcounterUpdateInterval\x12%\n" +
 	"\x0ewifi_threshold\x18\x03 \x01(\x05R\rwifiThreshold\x12#\n" +
-	"\rble_threshold\x18\x04 \x01(\x05R\fbleThreshold\x1a\xc6\x05\n" +
+	"\rble_threshold\x18\x04 \x01(\x05R\fbleThreshold\x1a\xb7\x05\n" +
 	"\fSerialConfig\x12\x18\n" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x12\x12\n" +
 	"\x04echo\x18\x02 \x01(\bR\x04echo\x12\x10\n" +
@@ -2350,7 +2345,7 @@ const file_meshtastic_module_config_proto_rawDesc = "" +
 	"\vBAUD_230400\x10\f\x12\x0f\n" +
 	"\vBAUD_460800\x10\r\x12\x0f\n" +
 	"\vBAUD_576000\x10\x0e\x12\x0f\n" +
-	"\vBAUD_921600\x10\x0f\"n\n" +
+	"\vBAUD_921600\x10\x0f\"_\n" +
 	"\vSerial_Mode\x12\v\n" +
 	"\aDEFAULT\x10\x00\x12\n" +
 	"\n" +
@@ -2359,8 +2354,7 @@ const file_meshtastic_module_config_proto_rawDesc = "" +
 	"\aTEXTMSG\x10\x03\x12\b\n" +
 	"\x04NMEA\x10\x04\x12\v\n" +
 	"\aCALTOPO\x10\x05\x12\b\n" +
-	"\x04WS85\x10\x06\x12\r\n" +
-	"\tVE_DIRECT\x10\a\x1a\xac\x04\n" +
+	"\x04WS85\x10\x06\x1a\xac\x04\n" +
 	"\x1aExternalNotificationConfig\x12\x18\n" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x12\x1b\n" +
 	"\toutput_ms\x18\x02 \x01(\rR\boutputMs\x12\x16\n" +

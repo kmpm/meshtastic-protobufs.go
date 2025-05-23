@@ -246,14 +246,6 @@ const (
 	HardwareModel_HELTEC_SENSOR_HUB HardwareModel = 92
 	// Reserved Fried Chicken ID for future use
 	HardwareModel_RESERVED_FRIED_CHICKEN HardwareModel = 93
-	// Heltec Magnetic Power Bank with Meshtastic compatible
-	HardwareModel_HELTEC_MESH_POCKET HardwareModel = 94
-	// Seeed Solar Node
-	HardwareModel_SEEED_SOLAR_NODE HardwareModel = 95
-	// NomadStar Meteor Pro https://nomadstar.ch/
-	HardwareModel_NOMADSTAR_METEOR_PRO HardwareModel = 96
-	// Elecrow CrowPanel Advance models, ESP32-S3 and TFT with SX1262 radio plugin
-	HardwareModel_CROWPANEL HardwareModel = 97
 	// ------------------------------------------------------------------------------------------------------------------------------------------
 	// Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
 	// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -357,10 +349,6 @@ var (
 		91:  "T_ETH_ELITE",
 		92:  "HELTEC_SENSOR_HUB",
 		93:  "RESERVED_FRIED_CHICKEN",
-		94:  "HELTEC_MESH_POCKET",
-		95:  "SEEED_SOLAR_NODE",
-		96:  "NOMADSTAR_METEOR_PRO",
-		97:  "CROWPANEL",
 		255: "PRIVATE_HW",
 	}
 	HardwareModel_value = map[string]int32{
@@ -458,10 +446,6 @@ var (
 		"T_ETH_ELITE":                  91,
 		"HELTEC_SENSOR_HUB":            92,
 		"RESERVED_FRIED_CHICKEN":       93,
-		"HELTEC_MESH_POCKET":           94,
-		"SEEED_SOLAR_NODE":             95,
-		"NOMADSTAR_METEOR_PRO":         96,
-		"CROWPANEL":                    97,
 		"PRIVATE_HW":                   255,
 	}
 )
@@ -4440,7 +4424,7 @@ const file_meshtastic_mesh_proto_rawDesc = "" +
 	"\x10request_transfer\x18\x02 \x01(\bH\x00R\x0frequestTransfer\x12)\n" +
 	"\x0faccept_transfer\x18\x03 \x01(\bH\x00R\x0eacceptTransfer\x12@\n" +
 	"\rresend_chunks\x18\x04 \x01(\v2\x19.meshtastic.resend_chunksH\x00R\fresendChunksB\x11\n" +
-	"\x0fpayload_variant*\xda\x0e\n" +
+	"\x0fpayload_variant*\x83\x0e\n" +
 	"\rHardwareModel\x12\t\n" +
 	"\x05UNSET\x10\x00\x12\f\n" +
 	"\bTLORA_V2\x10\x01\x12\f\n" +
@@ -4547,11 +4531,7 @@ const file_meshtastic_mesh_proto_rawDesc = "" +
 	"\fTHINKNODE_M2\x10Z\x12\x0f\n" +
 	"\vT_ETH_ELITE\x10[\x12\x15\n" +
 	"\x11HELTEC_SENSOR_HUB\x10\\\x12\x1a\n" +
-	"\x16RESERVED_FRIED_CHICKEN\x10]\x12\x16\n" +
-	"\x12HELTEC_MESH_POCKET\x10^\x12\x14\n" +
-	"\x10SEEED_SOLAR_NODE\x10_\x12\x18\n" +
-	"\x14NOMADSTAR_METEOR_PRO\x10`\x12\r\n" +
-	"\tCROWPANEL\x10a\x12\x0f\n" +
+	"\x16RESERVED_FRIED_CHICKEN\x10]\x12\x0f\n" +
 	"\n" +
 	"PRIVATE_HW\x10\xff\x01*,\n" +
 	"\tConstants\x12\b\n" +
